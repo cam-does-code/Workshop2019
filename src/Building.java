@@ -1,16 +1,16 @@
 import java.util.*;
 
 public class Building {
+    private boolean windowsOpen;
     private String buildingID;
     private int co2level;
-    private boolean windownsOpen;
     private ArrayList<String> actuators;
 
 
-    public Building(String buildingID, int co2level, boolean windownsOpen, ArrayList<String> actuators) {
+    public Building(String buildingID, int co2level, boolean windowsOpen, ArrayList<String> actuators) {
         this.buildingID = buildingID;
         this.co2level = co2level;
-        this.windownsOpen = windownsOpen;
+        this.windowsOpen = windowsOpen;
         this.actuators = actuators;
     }
 
@@ -22,28 +22,28 @@ public class Building {
         this.buildingID = buildingID;
     }
 
-    public int getCo2level() {
-        return co2level;
-    }
-
-    public void setCo2level(int co2level) {
-        this.co2level = co2level;
-    }
-
     public boolean isWindownsOpen() {
-        return windownsOpen;
+        return windowsOpen;
     }
 
-    public void setWindownsOpen(boolean windownsOpen) {
-        this.windownsOpen = windownsOpen;
+    public void setWindownsOpen(boolean windowsOpen) {
+        this.windowsOpen = windowsOpen;
     }
 
     public ArrayList<String> getActuators() {
         return actuators;
     }
+    public int getTemp() {
+        return getRandomIntegerWithinRange(1, 50);
+    }
 
-    public void setActuators(ArrayList<String> actuators) {
-        this.actuators = actuators;
+    public int getCO2Level() {
+        return getRandomIntegerWithinRange(10, 60);
+    }
+
+    private static int getRandomIntegerWithinRange(int min, int max) {
+        int spread = max - min;
+        return new Random().nextInt(spread + 1) + min;
     }
 
 }

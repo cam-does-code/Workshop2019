@@ -20,10 +20,10 @@ public BuildingSystem(){
             command = s.next().toLowerCase();
            if(command.equals("quit")) {
                finished = true;
-               continue;
            }
-
-           ;
+           else {
+               //commandSwitch();
+           }
 
         }
 
@@ -31,6 +31,7 @@ public BuildingSystem(){
 
 public void addBuilding(){
 
-
 }
+
+//command
 }

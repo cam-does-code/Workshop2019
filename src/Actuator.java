@@ -1,14 +1,18 @@
+
 public class Actuator {
+    private Building building;
 
     private String ActuatorID;
-    private boolean isOpen;
+    private boolean isOpen = false;
 
     public void windowIsOpen() {
-        if (getTemp > 25) {
+        int x = building.getCO2Level();
+        if (x > 25 ) {
             isOpen = true;
-
-            System.out.println("The temperature is " + getTemp + " so the window is open now");
-
+            System.out.println("The CO2 level is " + x + "% so the window is open now");
+        }
+        else{
+            System.out.println("window is closed. The CO2 level is "+ x +"%");
         }
 
 
