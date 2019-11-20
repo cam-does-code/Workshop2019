@@ -4,6 +4,8 @@ public class Building {
     private String buildingID;
     private List<Actuator> actuators;
     private List<Sensor> sensors;
+    private int temp;
+    private int co2;
 
 
     public Building(String buildingID) {
@@ -80,12 +82,20 @@ public class Building {
         return getRandomIntegerWithinRange(1, 50);
     }
 
-    public int getCO2Level() {
+    public int getCo2Level() {
         return getRandomIntegerWithinRange(10, 60);
     }
 
     private static int getRandomIntegerWithinRange(int min, int max) {
         int spread = max - min;
         return new Random().nextInt(spread + 1) + min;
+    }
+
+    public void setTemp(int temp) {
+        this.temp = temp;
+    }
+
+    public void setCo2(int co2) {
+        this.co2 = co2;
     }
 }

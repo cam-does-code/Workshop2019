@@ -5,6 +5,8 @@ public class Sensor {
 
     private String SensorID;
 
+
+
     public Sensor(String sensorID) {
         SensorID = sensorID;
     }
