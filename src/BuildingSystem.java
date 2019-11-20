@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BuildingSystem {
-private ArrayList<Building> buildings;
+private List<Building> buildings;
 
 public BuildingSystem(){
     this.buildings = new ArrayList<>();
@@ -53,7 +54,10 @@ public BuildingSystem(){
         else {
             System.out.println("That building is not in the system");}
         }
-//command
-}
+    }
+
+    public List<Building> getBuildings(){
+        return buildings;
+    }
 
 }
