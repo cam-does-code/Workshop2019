@@ -22,8 +22,12 @@ public BuildingSystem(){
            if(command.equals("quit")) {
                finished = true;
            }
-           else {
-               //commandSwitch();
+           else if (command.equals("add")) {
+               addBuilding();
+           }
+           else if (command.equals("list")) {
+               getBuildings();
+               System.out.println(toString());
            }
 
         }
@@ -60,4 +64,14 @@ public BuildingSystem(){
         return buildings;
     }
 
+    @Override
+    public String toString() {
+        String output = "";
+        for (int i = 0; i < buildings.size(); i++) {
+            output += buildings.get(i).getBuildingID() + ", ";
+        }
+
+        return "Buildingsystem:\n" +
+                "Buildings: " + output;
+    }
 }

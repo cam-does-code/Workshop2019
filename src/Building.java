@@ -82,7 +82,7 @@ public class Building {
         return getRandomIntegerWithinRange(1, 50);
     }
 
-    public int getCo2Level() {
+    public int getCO2Level() {
         return getRandomIntegerWithinRange(10, 60);
     }
 
