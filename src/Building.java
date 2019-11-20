@@ -27,6 +27,7 @@ public class Building {
         String sensorName = scanner.nextLine();
         System.out.println("The sensor " + sensorName + " has been added to " + this.buildingID);
         sensors.add(new Sensor(sensorName));
+
     }
 
     public void removeSensor() {
