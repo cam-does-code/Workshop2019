@@ -3,6 +3,18 @@ public class Actuator {
     private Building building;
     private String ActuatorID;
 
+    public Actuator(String ActuatorID){
+        this.ActuatorID = ActuatorID;
+    }
+
+    public String getActuatorID() {
+        return ActuatorID;
+    }
+
+    public void setActuatorID(String actuatorID) {
+        ActuatorID = actuatorID;
+    }
+
     public void windowIsOpen() {
         int x = building.getCO2Level();
         if (x > 25 ) {

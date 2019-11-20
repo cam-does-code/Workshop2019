@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Building {
     private String buildingID;
-    private List<Building> actuators;
+    private List<Actuator> actuators;
     private List<Sensor> sensors;
 
 
@@ -21,16 +21,30 @@ public class Building {
     }
 
     public void addSensor(){
-        System.out.println("Enter new SensorID");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter new Sensor ID:");
+
+        String sensorName = scanner.nextLine();
+        System.out.println("The sensor " + sensorName + " has been added to " + this.buildingID);
+        sensors.add(new Sensor(sensorName));
+
 
 
     }
     public List<Sensor> getSensors(){
-
         return sensors;
     }
 
-    public List<Building> getActuators() {
+    public void addActuator() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter new Actuator ID:");
+
+        String actuatorName = scanner.nextLine();
+        System.out.println("The actuator " + actuatorName + " has been added to " + this.buildingID);
+        actuators.add(new Actuator(actuatorName));
+    }
+
+    public List<Actuator> getActuators() {
         return actuators;
     }
     public int getTemp() {
