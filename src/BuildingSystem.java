@@ -29,9 +29,31 @@ public BuildingSystem(){
 
         }
 
-public void addBuilding(){
+    public void addBuilding(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter new Building ID:");
 
+        String buildingName = scanner.nextLine();
+        buildings.add(new Building(buildingName));
+        System.out.println(buildingName + " has been added to the system");
+
+
+    }
+
+    public void removeBuilding(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Which building to remove?");
+
+        String buildingName = scanner.nextLine();
+        for (Building name : buildings) {
+        if (buildingName.equals(name.getBuildingID())){
+            buildings.remove(buildingName);
+            System.out.println(buildingName + " has been removed from the system.");
+        }
+        else {
+            System.out.println("That building is not in the system");}
+        }
+//command
 }
 
-//command
 }

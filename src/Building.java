@@ -27,10 +27,23 @@ public class Building {
         String sensorName = scanner.nextLine();
         System.out.println("The sensor " + sensorName + " has been added to " + this.buildingID);
         sensors.add(new Sensor(sensorName));
-
-
-
     }
+
+    public void removeSensor() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Which sensor to remove?");
+
+        String sensorName = scanner.nextLine();
+        for (Sensor name : sensors) {
+            if (sensorName.equals(name.getSensorID())) {
+                sensors.remove(sensorName);
+                System.out.println(sensorName + " has been removed from the building.");
+            } else {
+                System.out.println("That sensor is not in the building");
+            }
+        }
+    }
+
     public List<Sensor> getSensors(){
         return sensors;
     }
@@ -42,6 +55,21 @@ public class Building {
         String actuatorName = scanner.nextLine();
         System.out.println("The actuator " + actuatorName + " has been added to " + this.buildingID);
         actuators.add(new Actuator(actuatorName));
+    }
+
+    public void removeActuator() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Which actuator to remove?");
+
+        String actuatorName = scanner.nextLine();
+        for (Actuator name : actuators) {
+            if (actuatorName.equals(name.getActuatorID())) {
+                actuators.remove(actuatorName);
+                System.out.println(actuatorName + " has been removed from the building.");
+            } else {
+                System.out.println("That building is not in the system");
+            }
+        }
     }
 
     public List<Actuator> getActuators() {
