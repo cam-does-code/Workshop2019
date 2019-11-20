@@ -4,6 +4,7 @@ public class Building {
     private boolean windowsOpen;
     private String buildingID;
     private int co2level;
+    private int temp;
     private ArrayList<String> actuators;
 
 
