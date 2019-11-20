@@ -20,6 +20,16 @@ public class Building {
         this.buildingID = buildingID;
     }
 
+    public void addSensor(){
+        System.out.println("Enter new SensorID");
+
+
+    }
+    public List<Sensor> getSensors(){
+
+        return sensors;
+    }
+
     public List<Building> getActuators() {
         return actuators;
     }
